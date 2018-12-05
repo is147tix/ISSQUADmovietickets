@@ -1,35 +1,41 @@
-
-
 package com.company;
-
 import java.util.Scanner;
 
-public class CustomerAccount {
+    public class CustomerAccount {
+        static Scanner input = new Scanner(System.in);
+        private int num;
+        private String fullName;
 
-    static Scanner input = new Scanner(System.in);
 
-
-    public String custInfo() {
-        System.out.print("Please enter your first name: ");
-        String enteredFirst = input.nextLine();
-        String firstName = enteredFirst.substring(0, 1).toUpperCase() + enteredFirst.substring(1).toLowerCase();
-
-        System.out.print("Please enter your last name: ");
-        String enteredLast = input.nextLine();
-        String lastName = enteredLast.substring(0, 1).toUpperCase() + enteredLast.substring(1).toLowerCase();
-
-        int confirmationNum = (int) (Math.random() * 9999 + 1);
-
-        System.out.println(lastName + ", " + firstName);
-
-        System.out.println("Account Number # " + confirmationNum);
-
-        return lastName;
+    public CustomerAccount(String fullName, int num){
+        this.fullName = fullName;
+        this.num = num;
     }
 
-    public int age() {
-        System.out.print("Enter your age: ");
-        int age = input.nextInt();
-        return age;
+
+    public static void payment(){
+        System.out.println("Please Pay using a Credit card (enter 1) or a Debit card (Enter 2).");
+        int method = input.nextInt();
+
+        System.out.println("Please input your card number");
+        int cardNum = input.nextInt();
+
+        switch(method){
+            case 1: System.out.println("Please enter zip code");
+                    int zip = input.nextInt();
+                    break;
+            case 2: System.out.println("Please enter pin code");
+                    int pin = input.nextInt();
+                    break;
+        }
+
+                System.out.println("Please input your expiration date for example 08/18 should be entered as 0818.");
+                int expDate = input.nextInt();
+                //if this date is sooner than today, than decline...
+
+                System.out.println("Please input your billing street address. ");
+                String street = input.nextLine();
+
     }
+
 }

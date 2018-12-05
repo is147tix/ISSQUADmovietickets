@@ -1,10 +1,12 @@
+package com.company;
+
 import java.util.Scanner;
 
 public class Prices {
 
     static Scanner input = new Scanner(System.in);
 
-    public static void main(String[] args){
+    public static void pricing(){
 
         System.out.println("Adult ticket: $12.00");
         System.out.println("Senior/Child ticket: $9.00");
