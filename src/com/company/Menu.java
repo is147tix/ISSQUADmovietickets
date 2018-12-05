@@ -8,7 +8,7 @@ public class Menu {
     public static void printMenu() {
 
         final int ageRatedR = 17;
-
+        int movie;
 
             System.out.println("           **********************************************");
             System.out.println("           * Welcome to the ISSQUAD Movie Ticket System *");
@@ -27,9 +27,11 @@ public class Menu {
                 System.out.println("\n__________________________________________________________________________");
             }
 
-            System.out.print("\nChoose a movie (1-4): ");
-            int movie = input.nextInt();
 
+            do {
+                System.out.print("\nChoose a movie (1-4): ");
+                 movie = input.nextInt();
+            } while (movie < 1 || movie > 4);
             // CustomerAccount cust = new CustomerAccount();
             System.out.print("Enter your age: ");
             int age = input.nextInt();

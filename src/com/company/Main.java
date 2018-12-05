@@ -9,8 +9,9 @@ public class Main {
 //menu, prices, customerAccount, receipt
         Menu.printMenu();
         Prices.pricing();
+        Receipt.getCustomerName();
         CustomerAccount.payment(); //still not print billing address line
-        Receipt.customerName();
+        Receipt.confirmationNum();
         Receipt.printTime();
 
     }
