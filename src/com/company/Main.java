@@ -8,7 +8,7 @@ public class Main {
         Scanner input = new Scanner(System.in);
 
         final int ageRatedR = 17;
-        String show="";
+        String show = "";
         int age, movie, showing;
 
         //display menu
@@ -50,7 +50,7 @@ public class Main {
                 }
             } while (showing >= 3);
 
-            System.out.println("You selected the "+show+ " showing for movie "+movie);
+            System.out.println("You selected the " + show + " showing for movie " + movie);
             Prices.pricing();
             CustomerAccount custAcct = new CustomerAccount();
             custAcct.payment();
@@ -62,5 +62,4 @@ public class Main {
     }
 
 
-
-    }
+}

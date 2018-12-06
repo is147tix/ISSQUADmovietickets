@@ -3,10 +3,10 @@ package com.company;
 import java.util.Scanner;
 
 public class CustomerAccount {
-    static Scanner input = new Scanner(System.in);
-    private int num;
-    private String fullName;
-    private double cardNum;
+    Scanner input = new Scanner(System.in);
+    private int num, method;
+    private String fullName, cardNum;
+
 
     public CustomerAccount() {
     }
@@ -19,10 +19,10 @@ public class CustomerAccount {
 
     public void payment() {
         System.out.println("Please Pay using a Credit card (enter 1) or a Debit card (Enter 2): ");
-        int method = input.nextInt();
+        method = input.nextInt();
 
         System.out.println("Please input your card number: ");
-        cardNum = input.nextDouble();
+        cardNum = input.next();
 
 
         switch (method) {
@@ -40,9 +40,9 @@ public class CustomerAccount {
         System.out.print("Please input your expiration date (for example 08/18 should be entered as 0818): ");
         int expDate = input.nextInt();
 
-        //String card = Double.toString(double cardNum);
-        //String last4char = card.substring(0, 4);
-        //System.out.println("\nCard Number: XXXX XXXX XXXX " + last4char);
+        String last4char = cardNum.substring(0, 4);
+        System.out.println("Card Number: XXXX XXXX XXXX " + last4char);
+        System.out.println("Expiration Date: " + expDate);
         System.out.println("\nYour credit card been successfully billed");
 
     }

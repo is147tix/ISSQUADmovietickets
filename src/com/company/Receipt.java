@@ -46,7 +46,7 @@ public class Receipt {
     }
 
     public void setFirstName(String name) {
-        firstName= name;
+        firstName = name;
     }
 
     public void setLastName(String name) {
