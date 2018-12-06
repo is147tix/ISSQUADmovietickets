@@ -40,7 +40,7 @@ public class CustomerAccount {
         System.out.print("Please input your expiration date (for example 08/18 should be entered as 0818): ");
         int expDate = input.nextInt();
 
-        String last4char = cardNum.substring(0, 4);
+        String last4char = cardNum.substring(cardNum.length() - 4);
         System.out.println("Card Number: XXXX XXXX XXXX " + last4char);
         System.out.println("Expiration Date: " + expDate);
         System.out.println("\nYour credit card been successfully billed");
