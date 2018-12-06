@@ -13,18 +13,25 @@ public class Main {
 
 
         System.out.println("Please Pay using a Credit card or a Debit card.");
+
         System.out.println("Please input your card number");
-     input.nextBigInteger();
+        input.nextBigInteger();
+
         System.out.println("Please input your expiration date for example 08/18 should be entered as 0818.");
         input.nextInt();
+
         System.out.println("Please input your 3 digit security code on the back of the card.");
         input.nextInt();
+
         System.out.println("Please input your billing address. ");
-        input.nextLine();
+        textInput.nextLine();
+
         System.out.println("Please input your name as it appears on the card.");
-        input.nextLine();
+        textInput.nextLine();
+
         System.out.println("Please input your PIN if debit if credit type credit.");
-        input.nextLine();
+        textInput.nextLine();
+
         System.out.println("Thank You for your movie purchase, we hope you enjoy the movie!");
 
 	}
