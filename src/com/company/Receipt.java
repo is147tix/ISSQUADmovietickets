@@ -15,17 +15,19 @@ public class Receipt {
         System.out.print(formatDateTime + "\n");
     }
 
-    public static void customerName() {
+    public void customerName() {
         System.out.print("Please enter your first name: ");
         String enteredFirst = input.nextLine();
         String firstName = enteredFirst.substring(0, 1).toUpperCase() + enteredFirst.substring(1).toLowerCase();
+        setFirstName(firstName);
 
         System.out.print("Please enter your last name: ");
         String enteredLast = input.nextLine();
         String lastName = enteredLast.substring(0, 1).toUpperCase() + enteredLast.substring(1).toLowerCase();
+        setLastName(lastName);
 
         int confirmationNum = (int) (Math.random() * 9999 + 1);
-        System.out.println(firstName + " " + lastName + ", your confirmation# is " + confirmationNum);
+        System.out.println(getFirstName() + " " + getLastName() + ", your confirmation# is " + confirmationNum);
         System.out.println("Thank You for your movie purchase, we hope you enjoy the movie!");
 
     }
@@ -43,10 +45,12 @@ public class Receipt {
         firstName = first;
     }
 
-    public void setFirstName(String firstName) {
+    public void setFirstName(String name) {
+        firstName= name;
     }
 
-    public void setLastName(String lastName) {
+    public void setLastName(String name) {
+        lastName = name;
     }
 
     public String getFirstName() {

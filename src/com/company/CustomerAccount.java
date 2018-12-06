@@ -43,7 +43,7 @@ public class CustomerAccount {
         //String card = Double.toString(double cardNum);
         //String last4char = card.substring(0, 4);
         //System.out.println("\nCard Number: XXXX XXXX XXXX " + last4char);
-        System.out.println("Has been successfully billed");
+        System.out.println("\nYour credit card been successfully billed");
 
     }
 

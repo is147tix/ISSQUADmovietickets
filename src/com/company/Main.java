@@ -54,7 +54,8 @@ public class Main {
             Prices.pricing();
             CustomerAccount custAcct = new CustomerAccount();
             custAcct.payment();
-            Receipt.customerName();
+            Receipt receipt = new Receipt();
+            receipt.customerName();
             Receipt.printTime();
         }
 
